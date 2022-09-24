@@ -47,11 +47,11 @@ const Notes = (props) => {
             </button>
             
             <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog" role="document">
-                    <div className="modal-content">
+                <div className="modal-dialog"  role="document">
+                    <div className="modal-content" style={{backgroundColor: props.mode === 'dark' ? '#161c3b' : 'white', color: props.mode === 'dark' ? 'white' : '#161c3b' }}>
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">Edit Note</h5>
-                            <button type="button" className="close" data-bs-dismiss="modal" aria-label="Close">
+                            <button type="button" className="close" style={{backgroundColor: props.mode === 'dark' ? '#3d465d' : 'white', color: props.mode === 'dark' ? 'white' : '#161c3b' }} data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -59,15 +59,15 @@ const Notes = (props) => {
                             <form className="my-3" >
                                 <div className="mb-3">
                                     <label htmlFor="title" className="form-label" >Title</label>
-                            <input type="text" className="form-control" id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} minLength={3} required />
+                            <input type="text" className="form-control" style={{backgroundColor: props.mode === 'dark' ? '#3d465d' : 'white', color: props.mode === 'dark' ? 'white' : '#161c3b' }} id="etitle" name="etitle" value={note.etitle} aria-describedby="emailHelp" onChange={onChange} minLength={3} required />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="description" className="form-label">Description</label>
-                                    <input type="text" className="form-control"  id="edescription" name="edescription" value={note.edescription} onChange={onChange} minLength={5} required/>
+                                    <input type="text" className="form-control" style={{backgroundColor: props.mode === 'dark' ? '#3d465d' : 'white', color: props.mode === 'dark' ? 'white' : '#161c3b' }}  id="edescription" name="edescription" value={note.edescription} onChange={onChange} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="tag" className="form-label">Tag</label>
-                                    <input type="text" className="form-control" id="etag" name="etag" value={note.etag} onChange={onChange} />
+                                    <input type="text" className="form-control" style={{backgroundColor: props.mode === 'dark' ? '#3d465d' : 'white', color: props.mode === 'dark' ? 'white' : '#161c3b' }} id="etag" name="etag" value={note.etag} onChange={onChange} />
                                 </div>
                             </form>
                         </div>

@@ -36,16 +36,16 @@ const Login = (props) => {
 
     return (
         <div className='mt-3'>
-            <h2>Login to continue to iNotebook</h2>
+            <h2 style={{color: props.mode === 'dark' ? 'white' : '#161c3b' }}>Login to continue to iNotebook</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email address</label>
-                    <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp"/>
+                    <label htmlFor="email" className="form-label" style={{color: props.mode === 'dark' ? 'white' : '#161c3b' }}>Email address</label>
+                    <input type="email" className="form-control" style={{backgroundColor: props.mode === 'dark' ? '#3d465d' : 'white', color: props.mode === 'dark' ? 'white' : '#161c3b' }} value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp"/>
                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" name="password" className="form-control" value={credentials.password} onChange={onChange} id="password"/>
+                    <label htmlFor="password" className="form-label" style={{color: props.mode === 'dark' ? 'white' : '#161c3b' }}>Password</label>
+                    <input type="password" name="password" className="form-control" style={{backgroundColor: props.mode === 'dark' ? '#3d465d' : 'white', color: props.mode === 'dark' ? 'white' : '#161c3b' }} value={credentials.password} onChange={onChange} id="password"/>
                 </div>
                 <button type="submit" className="btn btn-primary" >Submit</button>
             </form>
