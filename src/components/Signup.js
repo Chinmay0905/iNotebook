@@ -7,7 +7,7 @@ const Signup = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const {name, email, password} = credentials;
-        const response = await fetch("https://marvelous-florentine-733342.netlify.app/api/auth/createuser", {
+        const response = await fetch("https://myinotebook.netlify.app/api/auth/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
